@@ -104,8 +104,7 @@ pub struct DatatypeStyle {
 impl DatatypeStyle {
     pub fn new(datatype: Datatype, endianness: Endianness, range: (f32, f32)) -> Self {
         let num_colors = 1024;
-        let mut colors = Vec::new();
-        colors.reserve(num_colors);
+        let mut colors = Vec::with_capacity(num_colors);
 
         let gradient = colorgrad::plasma();
         for i in 0..num_colors {

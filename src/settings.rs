@@ -53,8 +53,7 @@ pub struct Settings {
     pub datatype_settings: DatatypeSettings,
 
     pub buffer_length: isize,
-    pub canvas_width: isize,
-
+    //pub canvas_width: isize,
     pub value_range: (f32, f32),
 
     pub hex_view_visible: bool,
@@ -96,7 +95,7 @@ impl Default for Settings {
                 endianness: Endianness::Little,
             },
             buffer_length: 0,
-            canvas_width: WIDTH as isize,
+            //canvas_width: WIDTH as isize,
             value_range: (0.0, 100.0),
             hex_view_visible: false,
             hex_view: "".into(),
